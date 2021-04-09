@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Textbox from "./components/textbox";
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
     <div className="App">
-      <Textbox title="title" paragraph="paragraph" />
+      <Homepage />
     </div>
   );
 }
