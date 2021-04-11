@@ -1,0 +1,18 @@
+#logo {
+  width: 45px;
+}
+
+nav.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar li {
+  padding-left: 55px;
+}
