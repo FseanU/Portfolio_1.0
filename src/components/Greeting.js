@@ -9,7 +9,7 @@ const Greeting = () => {
         it's Hung-Chen
       </h1>
       <p>
-        I am a full stack developer based in Berlin, <br />
+        I am a Frontend developer based in Berlin, <br />
         helping to create meaningful experiences <br />
         through web applications.
       </p>
