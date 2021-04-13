@@ -18,7 +18,7 @@ nav.navbar {
   padding-left: 55px;
 }
 
-.navbar a:hover {
+.navbar ul a:hover {
   border-bottom: solid var(--highlight) 2px;
 }
 
