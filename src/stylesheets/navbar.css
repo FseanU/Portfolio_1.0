@@ -8,6 +8,7 @@ nav.navbar {
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar ul {
   display: flex;
   flex-direction: row;
@@ -15,4 +16,22 @@ nav.navbar {
 
 .navbar li {
   padding-left: 55px;
+}
+
+.navbar a:hover {
+  border-bottom: solid var(--highlight) 2px;
+}
+
+.navbar ul a {
+  font-size: calc(18px+0.5vw);
+  color: var(--black);
+  font-weight: 300;
+  transition: border 0.4s ease-in;
+  border-bottom: solid var(--main-color) 2px;
+  padding-bottom: 0.5rem;
+}
+
+.navbar > a {
+  width: 45px;
+  height: 45px;
 }
