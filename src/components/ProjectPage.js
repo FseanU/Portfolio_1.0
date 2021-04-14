@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
 import ProjectInfo from "./ProjectInfo";
-import "../stylesheets/projectPage.css";
 
 const ProjectPage = () => {
   return (

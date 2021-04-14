@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 import logo from "../assets/img/logo.png";
 import "../stylesheets/navbar.css";
 
@@ -10,7 +11,7 @@ const Navbar = () => {
       </a>
       <ul>
         <li>
-          <a href="">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
           <a href="">Project</a>
