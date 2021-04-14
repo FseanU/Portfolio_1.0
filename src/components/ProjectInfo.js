@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/projectInfo.css";
 
 const ProjectInfo = () => {
   return (

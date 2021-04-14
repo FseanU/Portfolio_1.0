@@ -1,0 +1,13 @@
+.project-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+  padding: 4rem 0 2rem 0;
+}
+
+.project-info p {
+  font-size: 18px;
+}
