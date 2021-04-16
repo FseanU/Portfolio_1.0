@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Homepage path="/" />
-        <ProjectPage path="/projects/:id" />
+        <ProjectPage path="/projects/:projectId" />
       </Router>
     </div>
   );
