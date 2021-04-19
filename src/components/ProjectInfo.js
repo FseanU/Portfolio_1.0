@@ -1,11 +1,11 @@
 import React from "react";
 import "../stylesheets/projectInfo.css";
 
-const ProjectInfo = () => {
+const ProjectInfo = ({ projectTitle, projectYear }) => {
   return (
     <div className="project-info">
-      <h1>Project title</h1>
-      <p>Year: 2020</p>
+      <h1>{projectTitle}</h1>
+      <p>{projectYear}</p>
     </div>
   );
 };
