@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import ProjectInfo from "./ProjectInfo";
-import ProjectContentBlock from "./ProjectContentBlock";
+import ProjectContent from "./ProjectContent";
 import { projects } from "../utils/_DATA";
 
 const ProjectPage = ({ projectId }) => {
@@ -16,14 +16,7 @@ const ProjectPage = ({ projectId }) => {
         projectTitle={projectInfo.name}
         projectYear={projectInfo.year}
       />
-      {content.map(({ imgUrl, title, paragraph }) => (
-        <ProjectContentBlock
-          imgUrl={imgUrl}
-          title={title}
-          paragraph={paragraph}
-          key={imgUrl}
-        />
-      ))}
+      <ProjectContent content={content} />
     </div>
   );
 };
