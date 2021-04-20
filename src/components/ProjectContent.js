@@ -3,8 +3,8 @@ import ProjectContentBlock from "./ProjectContentBlock";
 import styled from "styled-components";
 
 const StyledProjectContent = styled.div`
+  grid-column: 2/3;
   display: grid;
-  grid-template-columns: 1fr 12fr 1fr;
   grid-gap: 8rem 0;
 `;
 
