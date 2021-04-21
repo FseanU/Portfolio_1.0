@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components/macro";
 
 const StyledGreeting = styled.div`
+  grid-column: 2/3;
   height: 75vh;
   display: flex;
   flex-direction: column;

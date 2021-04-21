@@ -4,6 +4,7 @@ import styled from "styled-components/macro";
 import { projects } from "../utils/_DATA";
 
 const StyledProjectList = styled.div`
+  grid-column: 2/3;
   border-top: solid 0.2rem var(--black);
 `;
 

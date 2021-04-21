@@ -4,6 +4,7 @@ import styled from "styled-components/macro";
 import logo from "../assets/img/logo.png";
 
 const StyledNav = styled.nav`
+  grid-column: 2/3;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

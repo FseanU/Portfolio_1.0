@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components/macro";
 
 const StyledContact = styled.div`
+  grid-column: 2/3;
   margin: 16rem 0 8rem 0;
 `;
 
