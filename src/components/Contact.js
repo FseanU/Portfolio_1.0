@@ -1,16 +1,24 @@
 import React from "react";
-import "../stylesheets/contact.css";
+import styled from "styled-components/macro";
+
+const StyledContact = styled.div`
+  margin: 16rem 0 8rem 0;
+`;
+
+const Paragraph = styled.p`
+  margin-top: 2rem;
+`;
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <StyledContact>
       <h1>Contact</h1>
-      <p>
+      <Paragraph>
         I'm always open to new challenges, <br />
         so feel free to drop me a line at <br />
         contact@hungchenfu.com
-      </p>
-    </div>
+      </Paragraph>
+    </StyledContact>
   );
 };
 

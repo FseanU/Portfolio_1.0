@@ -1,24 +1,45 @@
 import React from "react";
 import { Link } from "@reach/router";
-import "../stylesheets/projectList.css";
+import styled from "styled-components/macro";
 import { projects } from "../utils/_DATA";
+
+const StyledProjectList = styled.div`
+  border-top: solid 0.2rem var(--black);
+`;
+
+const Heading = styled.h3`
+  border-bottom: solid 0.2rem var(--black);
+  margin: 0;
+  padding: 2rem 0;
+  font-size: calc(48px + 1.5vw);
+  font-weight: 400;
+  color: var(--black);
+  display: block;
+  transition: all 0.3s ease-in;
+  -webkit-text-stroke: 1.5px var(--black);
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--highlight);
+    border-bottom: solid 0.2rem var(--highlight);
+  }
+`;
 
 const ProjectList = () => {
   return (
-    <div className="project-list">
+    <StyledProjectList>
       {Object.keys(projects).map((projectKey) => {
         const projectName = projects[projectKey].projectInfo.name;
         const id = projects[projectKey].id;
 
         return (
           <Link to={`/projects/${id}`}>
-            <div className="project-card">
-              <h3>{projectName}</h3>
-            </div>
+            <Heading>{projectName}</Heading>
           </Link>
         );
       })}
-    </div>
+    </StyledProjectList>
   );
 };
 
