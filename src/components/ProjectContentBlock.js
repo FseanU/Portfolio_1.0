@@ -14,17 +14,23 @@ const ImgContent = styled.div`
   grid-column: ${(props) => props.gridColumn};
 `;
 
-const ProjectContentBlock = ({ imgUrl, title, paragraph, textLeft }) => {
+const ProjectContentBlock = ({
+  imgUrl,
+  title,
+  paragraph,
+  isTextLeft,
+  isIntroSection,
+}) => {
   return (
     <StyledProjectContentBlock>
-      {textLeft ? (
+      {isTextLeft ? (
         <>
           <TextContent
             title={title}
             paragraph={paragraph}
-            gridColumn={"1 / 5"}
+            gridColumn={isIntroSection ? "1 / 7" : "1 / 5"}
           />
-          <ImgContent gridColumn={"6 / 13"}>
+          <ImgContent gridColumn={isIntroSection ? "8 / 13" : "6 / 13"}>
             <img
               src={process.env.PUBLIC_URL + imgUrl}
               alt=""
