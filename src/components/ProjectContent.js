@@ -1,6 +1,6 @@
 import React from "react";
+import styled from "styled-components/macro";
 import ProjectContentBlock from "./ProjectContentBlock";
-import styled from "styled-components";
 
 const StyledProjectContent = styled.div`
   grid-column: 2/3;

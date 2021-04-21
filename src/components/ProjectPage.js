@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import ProjectInfo from "./ProjectInfo";
 import ProjectContent from "./ProjectContent";
 import { projects } from "../utils/_DATA";
