@@ -29,7 +29,7 @@ const Heading = styled.h3`
 
 const ProjectList = () => {
   return (
-    <StyledProjectList>
+    <StyledProjectList id="project">
       {Object.keys(projects).map((projectKey) => {
         const projectName = projects[projectKey].projectInfo.name;
         const id = projects[projectKey].id;

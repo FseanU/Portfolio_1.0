@@ -12,7 +12,7 @@ const Paragraph = styled.p`
 
 const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="contact">
       <h1>Contact</h1>
       <Paragraph>
         I'm always open to new challenges, <br />

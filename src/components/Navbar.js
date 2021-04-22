@@ -24,6 +24,18 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const SectionLink = styled.a`
+  font-size: calc(18px+0.5vw);
+  color: var(--black);
+  font-weight: 300;
+  transition: color 0.3s ease-in;
+  padding-bottom: 0.5rem;
+
+  &:hover {
+    color: var(--highlight);
+  }
+`;
+
 const LogoLink = styled(Link)`
   width: 45px;
   height: 45px;
@@ -49,10 +61,10 @@ const Navbar = () => {
           <StyledLink to="/about">About</StyledLink>
         </StyledList>
         <StyledList>
-          <StyledLink to="#">Project</StyledLink>
+          <SectionLink href="#project">Project</SectionLink>
         </StyledList>
         <StyledList>
-          <StyledLink to="#">Contact</StyledLink>
+          <SectionLink href="#contact">Contact</SectionLink>
         </StyledList>
       </StyledUL>
     </StyledNav>
