@@ -3,7 +3,8 @@ import styled from "styled-components/macro";
 import ProjectContentBlock from "./ProjectContentBlock";
 
 const StyledProjectContent = styled.div`
-  margin: 8rem auto;
+  /* margin: 8rem auto; */
+  /* padding-bottom: 4rem; */
   grid-column: 2/3;
   display: grid;
   grid-gap: 8rem 0;
