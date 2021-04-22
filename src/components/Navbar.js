@@ -16,12 +16,11 @@ const StyledLink = styled(Link)`
   font-size: calc(18px+0.5vw);
   color: var(--black);
   font-weight: 300;
-  transition: border 0.4s ease-in;
-  border-bottom: solid var(--main-color) 2px;
+  transition: color 0.3s ease-in;
   padding-bottom: 0.5rem;
 
   &:hover {
-    border-bottom: solid var(--highlight) 2px;
+    color: var(--highlight);
   }
 `;
 
