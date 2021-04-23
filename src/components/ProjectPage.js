@@ -1,13 +1,25 @@
 import React from "react";
 import { Link } from "@reach/router";
-import styled from "styled-components/macro";
+import styled, { keyframes } from "styled-components/macro";
 import ProjectInfo from "./ProjectInfo";
 import ProjectContent from "./ProjectContent";
 import { projects } from "../utils/_DATA";
 
+const fadeIn = keyframes`
+  0% {opacity: 0;}
+  35% {opacity: 0;}
+  100% {opacity: 1;}
+`;
+
+const slideIn = keyframes`
+  0% {transform: scaleX(0)}
+  100% {transform: scaleX(1)}
+`;
+
 const StyledProjectPage = styled.div`
   display: grid;
   grid-template-columns: 1fr 12fr 1fr;
+  animation: ${fadeIn} 0.5s ease-in;
 `;
 
 const StyledLink = styled(Link)`
@@ -22,9 +34,11 @@ const StyledLink = styled(Link)`
 `;
 
 const Divider = styled.div`
-  margin-top: 8rem;
+  margin-top: ${(props) => props.marginTop || "0"};
   grid-column: 2/3;
-  border-bottom: 1px solid var(--black);
+  border-bottom: ${(props) => props.borderWidth || "2px"} solid var(--black);
+  animation: ${slideIn} 0.5s ease-in;
+  transform-origin: 0% 100%;
 `;
 
 const Spacer = styled.div`
@@ -38,13 +52,15 @@ const ProjectPage = ({ projectId }) => {
   return (
     <StyledProjectPage>
       <StyledLink to="/">{"<< back"}</StyledLink>
+      <Divider></Divider>
       <ProjectInfo
         projectTitle={projectInfo.name}
         projectYear={projectInfo.year}
       />
+      <Divider></Divider>
       <Spacer></Spacer>
       <ProjectContent content={content} />
-      <Divider></Divider>
+      <Divider marginTop="8rem" borderWidth="1px"></Divider>
       <StyledLink to="/">{"<< back"}</StyledLink>
       <Spacer></Spacer>
     </StyledProjectPage>

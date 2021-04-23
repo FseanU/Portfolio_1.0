@@ -1,15 +1,20 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled, { keyframes } from "styled-components/macro";
+
+const fadeIn = keyframes`
+  0% {opacity: 0;}
+  35% {opacity: 0;}
+  100% {opacity: 1;}
+`;
 
 const StyledProjectInfo = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  border-top: 3px solid var(--black);
-  border-bottom: 3px solid var(--black);
-  padding: 4rem 0 2rem 0;
+  padding: 2.4rem 0 1.6rem 0;
   grid-column: 2/3;
+  animation: ${fadeIn} 1s ease-in;
 `;
 
 const Paragraph = styled.p`
