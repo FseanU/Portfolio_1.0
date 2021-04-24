@@ -17,7 +17,7 @@ const ImgContent = styled.div`
 const ProjectContentBlock = ({
   imgUrl,
   title,
-  paragraph,
+  paragraphs,
   isTextLeft,
   isIntroSection,
 }) => {
@@ -27,7 +27,7 @@ const ProjectContentBlock = ({
         <>
           <TextContent
             title={title}
-            paragraph={paragraph}
+            paragraphs={paragraphs}
             gridColumn={isIntroSection ? "1 / 7" : "1 / 5"}
           />
           <ImgContent gridColumn={isIntroSection ? "8 / 13" : "6 / 13"}>
@@ -49,7 +49,7 @@ const ProjectContentBlock = ({
           </ImgContent>
           <TextContent
             title={title}
-            paragraph={paragraph}
+            paragraphs={paragraphs}
             gridColumn={"9 / 13"}
           />
         </>

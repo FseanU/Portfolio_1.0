@@ -18,11 +18,21 @@ const Heading = styled.h3`
   font-size: 24px;
 `;
 
-const TextContent = ({ title, paragraph, gridColumn }) => {
+const TextContent = ({ title, paragraphs, gridColumn }) => {
   return (
     <StyledTextContent gridColumn={gridColumn}>
       {title ? <Heading>{title}</Heading> : ""}
-      <Paragraph>{paragraph}</Paragraph>
+      {paragraphs.map((paragraph) =>
+        paragraph ? (
+          <Paragraph key={paragraph}>
+            {paragraph}
+            <br></br>
+            <br></br>
+          </Paragraph>
+        ) : (
+          ""
+        )
+      )}
     </StyledTextContent>
   );
 };
