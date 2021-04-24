@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import styled from "styled-components/macro";
+import { useMediaQuery } from "react-responsive";
 import logo from "../assets/img/logo.png";
 
 const StyledNav = styled.nav`
@@ -51,6 +52,7 @@ const StyledList = styled.li`
 `;
 
 const Navbar = () => {
+  const isTabletOrBigger = useMediaQuery({ query: "(min-width: 768px)" });
   return (
     <StyledNav>
       <LogoLink to="/">
@@ -60,12 +62,16 @@ const Navbar = () => {
         <StyledList>
           <StyledLink to="/about">About</StyledLink>
         </StyledList>
-        <StyledList>
-          <SectionLink href="#project">Project</SectionLink>
-        </StyledList>
-        <StyledList>
-          <SectionLink href="#contact">Contact</SectionLink>
-        </StyledList>
+        {isTabletOrBigger && (
+          <>
+            <StyledList>
+              <SectionLink href="#project">Project</SectionLink>
+            </StyledList>
+            <StyledList>
+              <SectionLink href="#contact">Contact</SectionLink>
+            </StyledList>
+          </>
+        )}
       </StyledUL>
     </StyledNav>
   );
