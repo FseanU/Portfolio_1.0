@@ -9,17 +9,26 @@ const StyledGreeting = styled.div`
   justify-content: center;
 `;
 
+const Heading = styled.h1`
+  font-size: calc(40px + 1.5vw);
+  font-weight: 600;
+  line-height: 1.2;
+`;
+
 const Paragraph = styled.p`
   margin-top: 2rem;
+  font-size: calc(18px + 0.5vw);
+  font-weight: 300;
+  line-height: 1.5;
 `;
 
 const Greeting = () => {
   return (
     <StyledGreeting>
-      <h1>
+      <Heading>
         Hello, <br />
         it's Hung-Chen
-      </h1>
+      </Heading>
       <Paragraph>
         I am a Frontend developer based in Berlin, <br />
         helping to create meaningful experiences <br />
