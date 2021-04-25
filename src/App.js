@@ -3,6 +3,7 @@ import "./App.css";
 import Homepage from "./components/Homepage";
 import ProjectPage from "./components/ProjectPage";
 import AboutPage from "./components/AboutPage";
+import Footer from "./components/Footer";
 import OnRouteChange from "./components/PreventAutoScroll";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <ProjectPage path="/projects/:projectId" />
         <AboutPage path="/about" />
       </Router>
+      <Footer />
       <OnRouteChange
         action={() => {
           window.scrollTo(0, 0);
