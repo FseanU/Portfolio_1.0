@@ -7,7 +7,6 @@ import ProfileImg from "../assets/img/profile_with_cat.png";
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 12fr 1fr;
-  height: 90vh;
 `;
 
 const StyledLink = styled(Link)`
@@ -39,6 +38,7 @@ const StyledAboutPage = styled.div`
   grid-column: 2/3;
   display: grid;
   grid-template-columns: 7fr 5fr;
+  min-height: 88vh;
 `;
 
 const IntroText = styled.div`
