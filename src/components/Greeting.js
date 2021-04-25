@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { useMediaQuery } from "react-responsive";
 
 const StyledGreeting = styled.div`
   grid-column: 2/3;
@@ -10,7 +11,7 @@ const StyledGreeting = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-size: calc(40px + 1.5vw);
+  font-size: calc(36px + 1.5vw);
   font-weight: 600;
   line-height: 1.2;
 `;
@@ -23,6 +24,8 @@ const Paragraph = styled.p`
 `;
 
 const Greeting = () => {
+  const isSmallDevice = useMediaQuery({ query: "(max-width: 414px)" });
+
   return (
     <StyledGreeting>
       <Heading>
@@ -30,8 +33,8 @@ const Greeting = () => {
         it's Hung-Chen
       </Heading>
       <Paragraph>
-        I am a Frontend developer based in Berlin, <br />
-        helping to create meaningful experiences <br />
+        I am a Frontend developer based in Berlin, {!isSmallDevice && <br />}
+        helping to create meaningful experiences {!isSmallDevice && <br />}
         through web applications.
       </Paragraph>
     </StyledGreeting>

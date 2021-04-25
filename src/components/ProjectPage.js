@@ -26,6 +26,7 @@ const StyledLink = styled(Link)`
   grid-column: 2/3;
   margin: 1rem 0;
   font-size: 18px;
+  font-weight: 300;
   transition: color 0.3s ease-in;
 
   &:hover {

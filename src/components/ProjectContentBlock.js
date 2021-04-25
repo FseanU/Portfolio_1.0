@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { useMediaQuery } from "react-responsive";
 import TextContent from "./TextContent";
 
 const StyledProjectContentBlock = styled.div`
@@ -8,6 +9,10 @@ const StyledProjectContentBlock = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 8rem 0;
   align-items: center;
+
+  @media screen and (max-width: 414px) {
+    grid-gap: 2rem 0;
+  }
 `;
 
 const ImgContent = styled.div`
@@ -21,9 +26,25 @@ const ProjectContentBlock = ({
   isTextLeft,
   isIntroSection,
 }) => {
+  const isSmallDevice = useMediaQuery({ query: "(max-width: 414px)" });
   return (
     <StyledProjectContentBlock>
-      {isTextLeft ? (
+      {isSmallDevice ? (
+        <>
+          <ImgContent gridColumn="1 / 13">
+            <img
+              src={process.env.PUBLIC_URL + imgUrl}
+              alt=""
+              style={{ width: "100%" }}
+            />
+          </ImgContent>
+          <TextContent
+            title={title}
+            paragraphs={paragraphs}
+            gridColumn={"1 / 13"}
+          />
+        </>
+      ) : isTextLeft ? (
         <>
           <TextContent
             title={title}
