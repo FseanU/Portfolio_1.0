@@ -25,6 +25,16 @@ const LinkContainer = styled.div`
   padding: 1rem 0;
 `;
 
+const Divider = styled.div`
+  grid-column: 2/3;
+  border-bottom: 1px solid var(--black);
+`;
+
+const Spacer = styled.div`
+  grid-column: 2/3;
+  padding: 1rem 0;
+`;
+
 const StyledAboutPage = styled.div`
   grid-column: 2/3;
   display: grid;
@@ -38,7 +48,7 @@ const IntroText = styled.div`
 
 const Title = styled.h1`
   font-size: calc(36px + 1.5vw);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.5;
   margin-bottom: 2rem;
 `;
@@ -61,6 +71,12 @@ const AboutPage = () => {
       <LinkContainer>
         <StyledLink to="/">{"<< back"}</StyledLink>
       </LinkContainer>
+      {isSmallDevice && (
+        <>
+          <Divider></Divider>
+          <Spacer></Spacer>
+        </>
+      )}
       <StyledAboutPage>
         <IntroText gridColumn={isSmallDevice ? "1 / 3" : "1 / 2"}>
           <Title>A little about me</Title>
@@ -80,6 +96,11 @@ const AboutPage = () => {
           <img src={ProfileImg} alt="" style={{ width: "100%" }} />
         </ImgContainer>
       </StyledAboutPage>
+      {isSmallDevice && <Divider></Divider>}
+      <LinkContainer>
+        <StyledLink to="/">{"<< back"}</StyledLink>
+      </LinkContainer>
+      {isSmallDevice && <Spacer></Spacer>}
     </GridContainer>
   );
 };
