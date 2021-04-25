@@ -50,7 +50,7 @@ export const projects = {
         imgUrl: "/img/wyr/wyr_intro.png",
         title: "",
         paragraphs: [
-          "WYR is an app let users play 'would you rather' game. A user can ask or answer a question in the form: 'Would you rather option A or option B ?' After answering a question, the user can see the poll result of the question.",
+          "WYR is a web app that lets you play 'Would you rather game'.  The app is independently designed and built by myself using React and Redux.",
         ],
       },
       {
