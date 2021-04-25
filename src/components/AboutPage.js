@@ -96,11 +96,15 @@ const AboutPage = () => {
           <img src={ProfileImg} alt="" style={{ width: "100%" }} />
         </ImgContainer>
       </StyledAboutPage>
-      {isSmallDevice && <Divider></Divider>}
-      <LinkContainer>
-        <StyledLink to="/">{"<< back"}</StyledLink>
-      </LinkContainer>
-      {isSmallDevice && <Spacer></Spacer>}
+      {isSmallDevice && (
+        <>
+          <Divider></Divider>
+          <LinkContainer>
+            <StyledLink to="/">{"<< back"}</StyledLink>
+          </LinkContainer>
+          <Spacer></Spacer>
+        </>
+      )}
     </GridContainer>
   );
 };
