@@ -8,6 +8,7 @@ const StyledContact = styled.div`
 
 const Paragraph = styled.p`
   margin-top: 2rem;
+  font-weight: 300;
 `;
 
 const Contact = () => {
