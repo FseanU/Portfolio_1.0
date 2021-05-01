@@ -2,6 +2,16 @@ import React from "react";
 import styled, { keyframes } from "styled-components/macro";
 import ProjectContentBlock from "./ProjectContentBlock";
 
+type ProjectContentProps = {
+  content: Content[];
+};
+
+type Content = {
+  imgUrl: string;
+  title: string;
+  paragraphs: string;
+};
+
 const fadeIn = keyframes`
   0% {opacity: 0;}
   35% {opacity: 0;}
@@ -15,7 +25,7 @@ const StyledProjectContent = styled.div`
   animation: ${fadeIn} 1.8s ease-in;
 `;
 
-const ProjectContent = ({ content }) => {
+const ProjectContent = ({ content }: ProjectContentProps) => {
   return (
     <StyledProjectContent>
       {content.map(({ imgUrl, title, paragraphs }, index) => {
