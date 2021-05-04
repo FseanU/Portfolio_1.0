@@ -41,7 +41,7 @@ const ProjectList = () => {
           const id = projects[projectKey].id;
 
           return (
-            <Link to={`/projects/${id}`}>
+            <Link to={`/projects/${id}`} key={id}>
               <Title>{projectName}</Title>
             </Link>
           );
