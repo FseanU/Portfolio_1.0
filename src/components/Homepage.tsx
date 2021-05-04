@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components/macro";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/index";
 import Greeting from "./Greeting";
 import ProjectList from "./ProjectList";
-import Contact from "./Contact";
+import Contact from "./Contact/index";
 
 const StyledHomepage = styled.div`
   display: grid;
