@@ -1,7 +1,18 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-const StyledTextContent = styled.div`
+interface StyledTextContentProps {
+  readonly gridColumn: string;
+  readonly textAlign?: string;
+}
+
+type TextContentProps = {
+  title: string;
+  paragraphs: string[];
+  gridColumn: string;
+};
+
+const StyledTextContent = styled.div<StyledTextContentProps>`
   grid-column: ${(props) => props.gridColumn};
   text-align: ${(props) => props.textAlign};
 `;
@@ -18,11 +29,11 @@ const Heading = styled.h3`
   font-size: 24px;
 `;
 
-const TextContent = ({ title, paragraphs, gridColumn }) => {
+const TextContent = ({ title, paragraphs, gridColumn }: TextContentProps) => {
   return (
     <StyledTextContent gridColumn={gridColumn}>
       {title ? <Heading>{title}</Heading> : ""}
-      {paragraphs.map((paragraph) =>
+      {paragraphs.map((paragraph: string) =>
         paragraph ? (
           <Paragraph key={paragraph}>
             {paragraph}

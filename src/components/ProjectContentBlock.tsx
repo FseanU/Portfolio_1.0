@@ -3,6 +3,18 @@ import styled from "styled-components/macro";
 import { useMediaQuery } from "react-responsive";
 import TextContent from "./TextContent";
 
+interface ImgContentProps {
+  readonly gridColumn: string;
+}
+
+type ProjectContentBlockProps = {
+  imgUrl: string;
+  title: string;
+  paragraphs: string[];
+  isTextLeft: boolean;
+  isIntroSection: boolean;
+};
+
 const StyledProjectContentBlock = styled.div`
   grid-column: 2/3;
   display: grid;
@@ -15,7 +27,7 @@ const StyledProjectContentBlock = styled.div`
   }
 `;
 
-const ImgContent = styled.div`
+const ImgContent = styled.div<ImgContentProps>`
   grid-column: ${(props) => props.gridColumn};
 `;
 
@@ -25,7 +37,7 @@ const ProjectContentBlock = ({
   paragraphs,
   isTextLeft,
   isIntroSection,
-}) => {
+}: ProjectContentBlockProps) => {
   const isSmallDevice = useMediaQuery({ query: "(max-width: 414px)" });
   return (
     <StyledProjectContentBlock>

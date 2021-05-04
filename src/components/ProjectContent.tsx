@@ -9,7 +9,7 @@ type ProjectContentProps = {
 type Content = {
   imgUrl: string;
   title: string;
-  paragraphs: string;
+  paragraphs: string[];
 };
 
 const fadeIn = keyframes`
