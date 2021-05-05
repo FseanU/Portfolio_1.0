@@ -1,4 +1,25 @@
-export const projects = {
+interface Projects {
+  [project: string]: Project;
+}
+
+interface Project {
+  id: string;
+  projectInfo: ProjectInfo;
+  content: ContentBlock[];
+}
+
+interface ProjectInfo {
+  name: string;
+  year: string;
+}
+
+interface ContentBlock {
+  imgUrl: string;
+  title?: string;
+  paragraphs: string[];
+}
+
+export const projects: Projects = {
   jamin: {
     id: "jamin",
     projectInfo: {

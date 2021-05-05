@@ -4,6 +4,14 @@ import styled from "styled-components/macro";
 import { useMediaQuery } from "react-responsive";
 import ProfileImg from "../assets/img/profile_with_cat.png";
 
+interface IntroTextProps {
+  readonly gridColumn: string;
+}
+
+interface ImgContainerProps {
+  readonly gridColumn: string;
+}
+
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 12fr 1fr;
@@ -41,7 +49,7 @@ const StyledAboutPage = styled.div`
   min-height: 88vh;
 `;
 
-const IntroText = styled.div`
+const IntroText = styled.div<IntroTextProps>`
   grid-column: ${(props) => props.gridColumn};
   align-self: center;
 `;
@@ -59,7 +67,7 @@ const Paragraph = styled.p`
   line-height: 1.8;
 `;
 
-const ImgContainer = styled.div`
+const ImgContainer = styled.div<ImgContainerProps>`
   grid-column: ${(props) => props.gridColumn};
   align-self: center;
 `;

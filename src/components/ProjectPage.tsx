@@ -1,9 +1,14 @@
 import React from "react";
-import { Link } from "@reach/router";
+import { Link, RouteComponentProps } from "@reach/router";
 import styled, { keyframes } from "styled-components/macro";
 import ProjectInfo from "./ProjectInfo";
 import ProjectContent from "./ProjectContent";
 import { projects } from "../utils/_DATA";
+
+type DividerProps = {
+  marginTop?: string;
+  borderWidth?: string;
+};
 
 const fadeIn = keyframes`
   0% {opacity: 0;}
@@ -34,7 +39,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Divider = styled.div`
+const Divider = styled.div<DividerProps>`
   margin-top: ${(props) => props.marginTop || "0"};
   grid-column: 2/3;
   border-bottom: ${(props) => props.borderWidth || "2px"} solid var(--black);
@@ -47,7 +52,11 @@ const Spacer = styled.div`
   padding: 2rem 0;
 `;
 
-const ProjectPage = ({ projectId }) => {
+interface ProjectPageProps extends RouteComponentProps {
+  projectId: string;
+}
+
+const ProjectPage = ({ projectId }: ProjectPageProps) => {
   const { projectInfo, content } = projects[projectId];
 
   return (

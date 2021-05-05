@@ -8,7 +8,7 @@ type ProjectContentProps = {
 
 type Content = {
   imgUrl: string;
-  title: string;
+  title?: string;
   paragraphs: string[];
 };
 
@@ -35,7 +35,7 @@ const ProjectContent = ({ content }: ProjectContentProps) => {
         return (
           <ProjectContentBlock
             imgUrl={imgUrl}
-            title={title}
+            title={title ? title : ""}
             paragraphs={paragraphs}
             key={imgUrl}
             isTextLeft={isTextLeft}
