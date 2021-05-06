@@ -1,10 +1,4 @@
-import React from "react";
 import styled, { keyframes } from "styled-components/macro";
-
-type ProjectInfoProps = {
-  projectTitle: string;
-  projectYear: string;
-};
 
 const fadeIn = keyframes`
   0% {opacity: 0;}
@@ -12,7 +6,7 @@ const fadeIn = keyframes`
   100% {opacity: 1;}
 `;
 
-const StyledProjectInfo = styled.div`
+const ProjectInfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,13 +20,4 @@ const Paragraph = styled.p`
   font-size: 18px;
 `;
 
-const ProjectInfo = ({ projectTitle, projectYear }: ProjectInfoProps) => {
-  return (
-    <StyledProjectInfo>
-      <h1>{projectTitle}</h1>
-      <Paragraph>{projectYear}</Paragraph>
-    </StyledProjectInfo>
-  );
-};
-
-export default ProjectInfo;
+export { ProjectInfoContainer, Paragraph };

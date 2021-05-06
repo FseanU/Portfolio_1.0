@@ -6,7 +6,7 @@ import * as Styled from "./styles";
 const ProjectList = () => {
   return (
     <>
-      <Styled.Divider></Styled.Divider>
+      <Styled.Divider />
       <Styled.Container id="project">
         {Object.keys(projects).map((projectKey) => {
           const projectName = projects[projectKey].projectInfo.name;
