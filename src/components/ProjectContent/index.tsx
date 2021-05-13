@@ -1,6 +1,6 @@
 import React from "react";
-import styled, { keyframes } from "styled-components/macro";
-import ProjectContentBlock from "./ProjectContentBlock";
+import ProjectContentBlock from "../ProjectContentBlock";
+import * as Styled from "./styles";
 
 type ProjectContentProps = {
   content: Content[];
@@ -12,22 +12,9 @@ type Content = {
   paragraphs: string[];
 };
 
-const fadeIn = keyframes`
-  0% {opacity: 0;}
-  35% {opacity: 0;}
-  100% {opacity: 1;}
-`;
-
-const StyledProjectContent = styled.div`
-  grid-column: 2/3;
-  display: grid;
-  grid-gap: 8rem 0;
-  animation: ${fadeIn} 1.8s ease-in;
-`;
-
 const ProjectContent = ({ content }: ProjectContentProps) => {
   return (
-    <StyledProjectContent>
+    <Styled.ProjectContentContainer>
       {content.map(({ imgUrl, title, paragraphs }, index) => {
         const isTextLeft = index % 2 === 0;
         const isIntroSection = index === 0;
@@ -43,7 +30,7 @@ const ProjectContent = ({ content }: ProjectContentProps) => {
           />
         );
       })}
-    </StyledProjectContent>
+    </Styled.ProjectContentContainer>
   );
 };
 
