@@ -5,6 +5,7 @@ import ProjectPage from "./components/ProjectPage";
 import AboutPage from "./components/AboutPage";
 import Footer from "./components/Footer";
 import OnRouteChange from "./components/PreventAutoScroll";
+import { scrollToTop } from "./utils/helper";
 
 function App() {
   return (
@@ -15,11 +16,7 @@ function App() {
         <AboutPage path="/about" />
       </Router>
       <Footer />
-      <OnRouteChange
-        action={() => {
-          window.scrollTo(0, 0);
-        }}
-      />
+      <OnRouteChange action={scrollToTop} />
     </div>
   );
 }
