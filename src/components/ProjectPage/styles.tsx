@@ -8,7 +8,7 @@ type DividerProps = {
 
 const fadeIn = keyframes`
   0% {opacity: 0;}
-  35% {opacity: 0;}
+  50% {opacity: 0;}
   100% {opacity: 1;}
 `;
 
@@ -20,7 +20,7 @@ const slideIn = keyframes`
 const ProjectPageContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 12fr 1fr;
-  animation: ${fadeIn} 0.5s ease-in;
+  animation: ${fadeIn} 0.8s ease-in;
 `;
 
 const RouterLink = styled(Link)`
@@ -39,7 +39,7 @@ const Divider = styled.div<DividerProps>`
   margin-top: ${(props) => props.marginTop || "0"};
   grid-column: 2/3;
   border-bottom: ${(props) => props.borderWidth || "2px"} solid var(--black);
-  animation: ${slideIn} 0.5s ease-in;
+  animation: ${slideIn} 0.8s ease-out;
   transform-origin: 0% 100%;
 `;
 
