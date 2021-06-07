@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle` 
+const GlobalStyle = createGlobalStyle`
   :root {
     --black: #353535;
     --main-color: #dcd6d0;
@@ -51,40 +51,6 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     font-size: calc(18px + 0.5vw);
-  }
-
-  @font-face {
-    font-family: "Montserrat";
-    src: local("Montserrat"),
-      url(./assets/fonts/Montserrat-Regular.ttf) format("truetype");
-  }
-
-  @font-face {
-    font-family: "Montserrat";
-    font-weight: 700;
-    src: local("Montserrat"),
-      url(../assets/fonts/Montserrat-Bold.ttf) format("truetype");
-  }
-
-  @font-face {
-    font-family: "Montserrat";
-    font-weight: 600;
-    src: local("Montserrat"),
-      url(../assets/fonts/Montserrat-SemiBold.ttf) format("truetype");
-  }
-
-  @font-face {
-    font-family: "Montserrat";
-    font-weight: 500;
-    src: local("Montserrat"),
-      url(../assets/fonts/Montserrat-Medium.ttf) format("truetype");
-  }
-
-  @font-face {
-    font-family: "Montserrat";
-    font-weight: 300;
-    src: local("Montserrat"),
-      url(../assets/fonts/Montserrat-Light.ttf) format("truetype");
   }
 `;
 
